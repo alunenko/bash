@@ -8,6 +8,7 @@ $ git branch -r --merged |
   awk '{split($0,a,"/"); print a[2]}' | 
   xargs git push origin --delete
 
+# aliases
 co = checkout
 br = branch
 ci = commit
