@@ -21,6 +21,8 @@ aliaslist = !sh -c 'git config --list | grep alias' -
 aliasEdit1 = !sh -c 'start ~/.gitconfig' -
 aliasEdit2 = !sh -c 'open ~/.gitconfig' -
 pushCurrent = !sh -c 'git push origin HEAD' -
+cmpom = "!sh -c 'git checkout master; git pull origin master'"
+cdpod = "!sh -c 'git checkout develop; git pull origin develop'"
 # old $1, new $2
 renlocal = !sh -c 'git branch -m $1 $2' -
 renlocalserver = !sh -c 'git branch -m $1 $2 && git push origin :$1' -
