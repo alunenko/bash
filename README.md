@@ -1,10 +1,9 @@
 # git hints
 
 ## git init
-* installGit
-* setAuthor
-* generateSsh
-* continueSpace
-* addKeyAgent
-* testSsh
-* defaultAliases (TODO: set aliases from file [git_aliases])
+* install git
+* set author
+* generate ssh
+* add key agent
+* test ssh connection
+* set aliases (TODO: set aliases from file [git_aliases])
