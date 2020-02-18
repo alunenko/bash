@@ -1,13 +1,3 @@
-# forked from schacon/gist:942899
-# delete all remote branches that have already been merged into master
-# $ git branch -r --merged | 
-#  grep origin | 
-#  grep -v '>' | 
-#  grep -v master | 
-#  xargs -L1 | 
-#  awk '{split($0,a,"/"); print a[2]}' | 
-#  xargs git push origin --delete
-
 # aliases
 co = checkout
 br = branch
@@ -30,3 +20,5 @@ cdpod = "!sh -c 'git checkout develop; git pull origin develop'"
 # old $1, new $2
 renlocal = !sh -c 'git branch -m $1 $2' -
 renlocalserver = !sh -c 'git branch -m $1 $2 && git push origin :$1' -
+# author $1, commit message preffix $2
+clog = "!sh -c 'git log --author=$1 --grep=$2 --pretty=format:\"%C(auto, Cyan)%aN %C(reset)%s\"'" -
