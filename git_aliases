@@ -23,3 +23,5 @@ renlocal = !sh -c 'git branch -m $1 $2' -
 renlocalserver = !sh -c 'git branch -m $1 $2 && git push origin :$1' -
 # author $1, commit message preffix $2
 clog = "!sh -c 'git log --date=format:\"%Y-%m-%d %H:%M:%S\" --pretty=format:\"%C(black bold)%ad %C(yellow)%h %<(13,trunc)%C(auto, Cyan)%aN%C(auto)%d %C(reset)%s\"'" -
+
+lastcdiff = !sh - c 'git diff HEAD^ HEAD' -
