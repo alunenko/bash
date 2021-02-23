@@ -4,14 +4,15 @@ br = branch
 oi = commit
 st = status
 #stash
-sl = stash list
+sl  = stash list
 sa0 = stash apply stash@{0}
 san = !sh -c 'git stash apply stash@{$1}' -
+sad = !sh -c 'git stash show -p stash@{$1}' -
 sgf = !sh -c 'git checkout stash@{$1} -- $2' - # stash index $1, file path $2
 
 cf = !sh -c 'git diff --name-only $1' -
 dm = !sh -c 'git branch --merged | egrep -v "(^\\*|master|dev)" | xargs git branch -d' -
-aliaslist = !sh -c 'git config --list | grep alias' -
+aliaslist  = !sh -c 'git config --list | grep alias' -
 aliasEdit1 = !sh -c 'start ~/.gitconfig' -
 aliasEdit2 = !sh -c 'open ~/.gitconfig' -
 pushCurrent = !sh -c 'git push origin HEAD' -
