@@ -2,6 +2,7 @@
 co = checkout
 br = branch
 oi = commit
+oipob = !sh -c 'git commit -m $1; git push origin HEAD'
 st = status
 #stash
 sl  = stash list
