@@ -26,3 +26,7 @@ renlocalserver = !sh -c 'git branch -m $1 $2 && git push origin :$1 && git push 
 clog = "!sh -c 'git log --date=format:\"%Y-%m-%d %H:%M:%S\" --pretty=format:\"%C(black bold)%ad %C(yellow)%h %<(13,trunc)%C(auto, Cyan)%aN%C(auto)%d %C(reset)%s\"'" -
 
 lastcdiff = !sh - c 'git diff HEAD^ HEAD' -
+
+ignore = !sh -c 'git update-index --skip-worktree' -
+unignore = !sh -c 'git update-index --no-skip-worktree' -
+ignored = !sh -c '!git ls-files -v | grep "^S"' -
