@@ -1,3 +1,5 @@
+autoload -Uz compinit && compinit
+
 autoload -Uz vcs_info
 precmd() {vcs_info}
 
