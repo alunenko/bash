@@ -30,3 +30,4 @@ lastcdiff = !sh - c 'git diff HEAD^ HEAD' -
 ignore = !sh -c 'git update-index --skip-worktree' -
 unignore = !sh -c 'git update-index --no-skip-worktree' -
 ignored = !sh -c '!git ls-files -v | grep "^S"' -
+deleteMerged = !sh -c 'git branch --merged main | egrep -v "(^\\*|master|dev|main)" | xargs -n 1 -r git branch -d' -
